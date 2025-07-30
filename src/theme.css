@@ -1,0 +1,38 @@
+/* Light (default) */
+:root,
+:root[data-theme="light"] {
+  --primary: 54.49% 0.215 262.7; /* HSL 221 83% 53% ~ #2563EB */
+  --on-primary: 100% 0 0; /* oq (C=0, hue ahamiyatsiz) */
+
+  --success: 67.25% 0.178 149.6; /* HSL 142 71% 41% ~ #16A34A */
+  --on-success: 100% 0 0;
+
+  --danger: 57.86% 0.214 27.2; /* HSL 0 72% 51% ~ #DC2626 */
+  --on-danger: 100% 0 0;
+
+  --neutral: 21.56% 0 0; /* HSL 0 0% 10% ~ #1A1A1A (xromasiz) */
+  --on-neutral: 100% 0 0;
+
+  --muted: 86.6% 0.0107 248; /* HSL 210 14% 83% ~ #D1D5DB */
+  --border: 84.52% 0 0; /* HSL 0 0% 80% ~ #CCCCCC */
+  --link: 54.49% 0.215 262.7; /* odatda primary bilan bir xil */
+}
+
+/* Dark */
+:root[data-theme="dark"] {
+  --primary: 60.43% 0.184 263.3; /* HSL 221 83% 60% */
+  --on-primary: 100% 0 0;
+
+  --success: 72.05% 0.192 149.5; /* HSL 142 71% 45% */
+  --on-success: 100% 0 0;
+
+  --danger: 60.45% 0.199 25.4; /* HSL 0 72% 56% */
+  --on-danger: 100% 0 0;
+
+  --neutral: 96.19% 0 0; /* HSL 0 0% 95% – oqroqqina */
+  --on-neutral: 21.56% 0 0; /* HSL 0 0% 10% ga ekvivalent (matn uchun) */
+
+  --muted: 33.26% 0.0212 256.8; /* HSL 215 16% 22% – kulrang fon */
+  --border: 41.84% 0 0; /* HSL 0 0% 30% */
+  --link: 65.98% 0.155 263.9; /* HSL 221 83% 66% */
+}
