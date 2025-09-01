@@ -25,7 +25,7 @@ export default function Home() {
             <OpenInV0Button name="hello-world" className="w-fit" />
           </div>
           <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
-            <Button size='2xl'>Primary</Button>
+            <Button size='2xl' variant='destructive'>Primary</Button>
           </div>
         </div>
 
