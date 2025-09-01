@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/new-york/hello-world/hello-world.tsx",
-      "content": "import { Button } from \"@/components/ui/button\";\r\n\r\nexport function HelloWorld() {\r\n  return <Button className=\"text-2xl font-bold\">Hello World</Button>\r\n}\r\n",
+      "content": "export function HelloWorld() {\r\n  return <p className=\"text-2xl font-bold\">Hello World 4</p>\r\n}\r\n",
       "type": "registry:component"
     }
   ]
