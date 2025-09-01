@@ -3,13 +3,27 @@ import { Slot } from "@radix-ui/react-slot"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
+
+const colors = {
+  white: '#ffffff',
+  primary: '55.65%_0.243_261.95',
+  primaryDarken: '50.65%_0.243_261.95',
+  primaryActive: '40.65%_0.243_261.95'
+}
+
 const buttonVariants = cva(
   "inline-flex items-center justify-start transition-all duration-100 ease-in-out whitespace-nowrap rounded-none text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-primary hover:bg-[var(--color-primary-darker)] active:bg-[var(--color-primary-active)] text-primary-foreground focus:[box-shadow:inset_0_0_0_2px_var(--primary),inset_0_0_0_3px_#ffffff]",
+          [
+            `bg-[oklch(${colors.primary})]`,
+            `hover:bg-[oklch(${colors.primaryDarken})]`,
+            `active:bg-[oklch(${colors.primaryActive})]`,
+            `text-primary-foreground`,
+            `focus:[box-shadow:inset_0_0_0_2px_oklch(${colors.primary}),inset_0_0_0_3px_${colors.white}]`
+          ].join(' '),
         destructive:
           "bg-destructive hover:bg-[var(--color-destructive-darker)] active:bg-[var(--color-destructive-active)] text-destructive-foreground focus:[box-shadow:inset_0_0_0_2px_var(--destructive),inset_0_0_0_3px_#ffffff]",
         tertiary:
