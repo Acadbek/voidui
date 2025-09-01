@@ -12,10 +12,10 @@ const buttonVariants = cva(
         default: `bg-[oklch(55.65%_0.243_261.95)]
           hover:bg-[oklch(50.65%_0.243_261.95)]
           active:bg-[oklch(40.65%_0.243_261.95)]
-          text-primary-foreground
+          text-[oklch(100.00%_0.000_0)]
           focus:[box-shadow:inset_0_0_0_2px_oklch(55.65%_0.243_261.95),inset_0_0_0_3px_#fff]`,
 
-        destructive: `bg-[oklch(0.6_0.2_25)] 
+        destructive: `bg-[oklch(0.6_0.2_25)]
           hover:bg-[oklch(0.55_0.2_25)] 
           active:bg-[oklch(0.45_0.2_25)] 
           text-[oklch(100.00%_0.000_0)] 
