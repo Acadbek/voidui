@@ -1,6 +1,6 @@
 import * as React from "react"
 import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { HelloWorld } from "@/registry/carbon/hello-world/hello-world"
+import { Button } from "@/registry/carbon/hello-world/hello-world"
 import { ExampleForm } from "@/registry/carbon/example-form/example-form"
 import PokemonPage from "@/registry/carbon/complex-component/page"
 
@@ -25,7 +25,7 @@ export default function Home() {
             <OpenInV0Button name="hello-world" className="w-fit" />
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
-            <HelloWorld />
+            <Button>Button</Button>
           </div>
         </div>
 

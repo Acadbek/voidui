@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/carbon/hello-world/hello-world.tsx",
-      "content": "export function HelloWorld() {\r\n  return <p className=\"text-2xl font-bold\">Hello World 4</p>\r\n}\r\n",
+      "content": "import { Button as B } from \"@/components/ui/button\"\r\nimport React from \"react\"\r\n\r\ninterface ButtonProps {\r\n  children: React.ReactNode\r\n}\r\n\r\nexport function Button({ children }: ButtonProps) {\r\n  return <B>{children}</B>\r\n}",
       "type": "registry:component"
     }
   ]

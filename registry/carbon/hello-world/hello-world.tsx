@@ -1,5 +1,10 @@
-import { Button } from "@/components/ui/button"
+import { Button as B } from "@/components/ui/button"
+import React from "react"
 
-export function HelloWorld() {
-  return <Button className="rounded-none text-2xl font-bold">Submit</Button>
+interface ButtonProps {
+  children: React.ReactNode
+}
+
+export function Button({ children }: ButtonProps) {
+  return <B>{children}</B>
 }
