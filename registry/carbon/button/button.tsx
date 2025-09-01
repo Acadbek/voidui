@@ -4,38 +4,52 @@ import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-const colors = {
-  white: '#ffffff',
-  primary: '55.65%_0.243_261.95',
-  primaryDarken: '50.65%_0.243_261.95',
-  primaryActive: '40.65%_0.243_261.95'
-}
-
 const buttonVariants = cva(
-  "inline-flex items-center justify-start transition-all duration-100 ease-in-out whitespace-nowrap rounded-none text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-start transition-all duration-100 ease-in-out whitespace-nowrap rounded-none text-sm disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 outline-none",
   {
     variants: {
       variant: {
-        default:
-          [
-            `bg-[oklch(${colors.primary})]`,
-            `hover:bg-[oklch(${colors.primaryDarken})]`,
-            `active:bg-[oklch(${colors.primaryActive})]`,
-            `text-primary-foreground`,
-            `focus:[box-shadow:inset_0_0_0_2px_oklch(${colors.primary}),inset_0_0_0_3px_${colors.white}]`
-          ].join(' '),
-        destructive:
-          "bg-destructive hover:bg-[var(--color-destructive-darker)] active:bg-[var(--color-destructive-active)] text-destructive-foreground focus:[box-shadow:inset_0_0_0_2px_var(--destructive),inset_0_0_0_3px_#ffffff]",
-        tertiary:
-          "bg-background border-[1px] hover:bg-[var(--background-darken)] active:bg-[var(--background-active)] border-[var(--primary)] text-[var(--primary)] focus:[box-shadow:inset_0_0_0_2px_var(--background),inset_0_0_0_3px_var(--primary)]",
-        secondary:
-          "bg-secondary text-secondary-foreground shadow-xs hover:bg-secondary/80",
+        default: `bg-[oklch(55.65%_0.243_261.95)]
+          hover:bg-[oklch(50.65%_0.243_261.95)]
+          active:bg-[oklch(40.65%_0.243_261.95)]
+          text-primary-foreground
+          focus:[box-shadow:inset_0_0_0_2px_oklch(55.65%_0.243_261.95),inset_0_0_0_3px_#fff]`,
+
+        destructive: `bg-[oklch(0.6_0.2_25)] 
+          hover:bg-[oklch(0.55_0.2_25)] 
+          active:bg-[oklch(0.45_0.2_25)] 
+          text-destructive-foreground 
+          focus:[box-shadow:inset_0_0_0_2px_var(--destructive),inset_0_0_0_3px_#ffffff]`,
+
+        tertiary: `bg-[oklch(1_0_0)] 
+          hover:bg-[oklch(0.95_0_0)] 
+          active:bg-[oklch(0.9_0_0)] 
+          border-[1px] 
+          border-[oklch(55.65%_0.243_261.95)] 
+          text-[oklch(55.65%_0.243_261.95)] 
+          focus:[box-shadow:inset_0_0_0_2px_oklch(1_0_0),inset_0_0_0_3px_oklch(55.65%_0.243_261.95)]`,
+
+        dark: `bg-[oklch(20.02%_0.000_0)]
+          text-[oklch(100.00%_0.000_0)]
+          active:bg-[oklch(30.02%_0.000_0)] 
+          hover:bg-[oklch(0.00%_0.000_0)] 
+          focus:[box-shadow:inset_0_0_0_2px_oklch(20.02%_0.000_0),inset_0_0_0_3px_oklch(100.00%_0.000_0)]`,
+
+        light: `bg-[oklch(1_0_0)]
+          hover:bg-[oklch(0.95_0_0)]
+          active:bg-[oklch(92.19%_0.000_0)]
+        `
       },
       size: {
-        default: "h-[3rem] min-w-[7.75rem] pl-4 pr-12 py-2",
-        sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        xs: 'h-[1.5rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-xs',
+        sm: "h-[2rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-[0.875rem]",
+        md: 'h-[2.5rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-[0.875rem]',
+        lgp: "h-[3rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-[0.875rem]",
+        lge: "h-[3rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-[1rem]",
+        xl: 'h-[4rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-[0.875rem] pt-[1rem] items-start',
+        '2xl': 'h-[5rem] w-[12.5rem] pl-[1rem] pr-[4rem] text-[0.875rem] pt-[1rem] items-start',
+        default: "h-[3rem] w-[12.5rem] pl-[1rem] pr-[4rem]",
+        icon: "h-[3rem] w-[3rem]",
       },
     },
     defaultVariants: {
