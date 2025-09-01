@@ -57,6 +57,9 @@
 @layer base {
   :root {
     --background: oklch(1 0 0);
+    --background-darken: oklch(0.95 0 0);
+    --background-active: oklch(0.9 0 0);
+
     --foreground: oklch(0.145 0 0);
 
     --card: oklch(1 0 0);
@@ -66,6 +69,9 @@
     --popover-foreground: oklch(0.145 0 0);
 
     --primary: oklch(55.65% 0.243 261.95);
+    --color-primary-darker: oklch(50.65% 0.243 261.95);
+    --color-primary-active: oklch(40.65% 0.243 261.95);
+
     --primary-foreground: oklch(0.985 0 0);
 
     --secondary: oklch(0.965 0 0);
@@ -78,6 +84,8 @@
     --accent-foreground: oklch(0.145 0 0);
 
     --destructive: oklch(0.6 0.2 25);
+    --color-destructive-darker: oklch(0.55 0.2 25);
+    --color-destructive-active: oklch(0.45 0.2 25);
     --destructive-foreground: oklch(0.985 0 0);
 
     --border: oklch(0.9 0 0);
@@ -207,4 +215,10 @@
 
 [data-rehype-pretty-code-title] + pre {
   @apply mt-2;
+}
+
+.hello:focus {
+  box-shadow:
+    inset 0 0 0 2px #0d6efd,
+    inset 0 0 0 3px #ffffff;
 }

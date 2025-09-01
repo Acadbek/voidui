@@ -1,16 +1,16 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
   "name": "acme",
-  "homepage": "https://acme.com",
+  "homepage": "https://voidui.vercel.app",
   "items": [
     {
-      "name": "hello-world",
+      "name": "button",
       "type": "registry:block",
-      "title": "Hello World",
-      "description": "A simple hello world component.",
+      "title": "Button",
+      "description": "A simple button component.",
       "files": [
         {
-          "path": "registry/carbon/hello-world/hello-world.tsx",
+          "path": "registry/carbon/button/button.tsx",
           "type": "registry:component"
         }
       ]
