@@ -1,12 +1,12 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
-  "name": "hello-world",
+  "name": "button",
   "type": "registry:block",
-  "title": "Hello World",
-  "description": "A simple hello world component.",
+  "title": "Button",
+  "description": "A simple Button component.",
   "files": [
     {
-      "path": "registry/carbon/hello-world/hello-world.tsx",
+      "path": "registry/carbon/button/button.tsx",
       "content": "import { Button as B } from \"@/components/ui/button\"\r\nimport React from \"react\"\r\n\r\ninterface ButtonProps {\r\n  children: React.ReactNode\r\n}\r\n\r\nexport function Button({ children }: ButtonProps) {\r\n  return <B>{children}</B>\r\n}",
       "type": "registry:component"
     }
