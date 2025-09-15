@@ -1,12 +1,13 @@
-import * as React from "react"
-import { OpenInV0Button } from "@/components/open-in-v0-button"
-import { Button } from "@/registry/carbon/button/button"
-import { ExampleForm } from "@/registry/carbon/example-form/example-form"
-import PokemonPage from "@/registry/carbon/complex-component/page"
-
+import * as React from "react";
+import { OpenInV0Button } from "@/components/open-in-v0-button";
+import { Button } from "@/registry/carbon/button/button";
+import { ExampleForm } from "@/registry/carbon/example-form/example-form";
+import PokemonPage from "@/registry/carbon/complex-component/page";
+import { Dropdown } from "@/registry/carbon/dropdown";
+// import { DropDown } from "@/registry/carbon/dropdown";
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
-
+//
 export default function Home() {
   return (
     <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
@@ -25,7 +26,7 @@ export default function Home() {
             <OpenInV0Button name="hello-world" className="w-fit" />
           </div>
           <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
-            <Button size='2xl' variant='destructive'>Primary</Button>
+            <Dropdown />
           </div>
         </div>
 
@@ -54,5 +55,5 @@ export default function Home() {
         </div>
       </main>
     </div>
-  )
+  );
 }
