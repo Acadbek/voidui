@@ -5,6 +5,7 @@ import * as SelectPrimitive from "@radix-ui/react-select";
 import { Check, ChevronDown, ChevronUp } from "lucide-react";
 
 import { cn } from "@/lib/utils";
+import { cva, VariantProps } from "class-variance-authority";
 
 const Select = SelectPrimitive.Root;
 
@@ -12,16 +13,34 @@ const SelectGroup = SelectPrimitive.Group;
 
 const SelectValue = SelectPrimitive.Value;
 
+const selectTriggerVariants = cva(
+  "flex h-10 w-full items-center justify-between border-b px-4 text-sm data-[placeholder]:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
+  {
+    variants: {
+      color: {
+        white: "bg-white border-[oklch(0.6434_0_0)] text-black",
+        gray: "bg-[oklch(0.9672_0_0)] border-[oklch(0.6434_0_0)] text-black",
+        "dark-gray": "bg-gray-800 border-gray-600 text-white",
+        dark: "bg-black border-gray-700 text-white",
+      },
+    },
+    defaultVariants: {
+      color: "gray",
+    },
+  },
+);
+
+export interface SelectTriggerProps
+  extends React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>,
+    VariantProps<typeof selectTriggerVariants> {}
+
 const SelectTrigger = React.forwardRef<
   React.ElementRef<typeof SelectPrimitive.Trigger>,
-  React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>
->(({ className, children, ...props }, ref) => (
+  SelectTriggerProps
+>(({ className, children, color, ...props }, ref) => (
   <SelectPrimitive.Trigger
     ref={ref}
-    className={cn(
-      "flex h-10 w-full bg-[#F4F4F4] items-center justify-between border-b border-[#8D8D8D] px-4 text-sm data-[placeholder]:text-muted-foreground disabled:cursor-not-allowed disabled:opacity-50 [&>span]:line-clamp-1",
-      className,
-    )}
+    className={cn(selectTriggerVariants({ color, className }))}
     {...props}
   >
     {children}
