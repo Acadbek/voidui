@@ -31,7 +31,10 @@ const selectTriggerVariants = cva(
 );
 
 export interface SelectTriggerProps
-  extends React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>,
+  extends Omit<
+      React.ComponentPropsWithoutRef<typeof SelectPrimitive.Trigger>,
+      "color"
+    >,
     VariantProps<typeof selectTriggerVariants> {}
 
 const SelectTrigger = React.forwardRef<
