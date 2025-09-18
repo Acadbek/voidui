@@ -30,10 +30,9 @@ import {
   DialogTrigger,
 } from "@/registry/carbon/modal";
 import { Input } from "@/registry/carbon/input";
+import { Badge } from "@/registry/carbon/badge";
+import { Icon } from "@iconify/react";
 
-// This page displays items from the custom registry.
-// You are free to implement this with your own design as needed.
-//
 export default function Home() {
   return (
     <TooltipProvider>
@@ -60,6 +59,59 @@ export default function Home() {
               <Button size="2xl" variant="destructive">
                 Primary
               </Button>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm text-muted-foreground sm:pl-3">
+                Button component
+              </h2>
+              <OpenInV0Button name="hello-world" className="w-fit" />
+            </div>
+            <div className="flex gap-1 items-center justify-center min-h-[400px] relative">
+              <Badge dismissable icon={<Icon icon="carbon:chip" />} bordered>
+                Tag content
+              </Badge>
+              <Badge
+                icon={<Icon icon="carbon:accept-action-usage" />}
+                bordered
+                kind="destructive"
+              >
+                Tag content
+              </Badge>
+              <Badge
+                icon={<Icon icon="carbon:bicycle" />}
+                bordered
+                kind="outline"
+              >
+                Tag content
+              </Badge>
+              <Badge
+                bordered
+                dismissable
+                icon={<Icon icon="carbon:ibm-cloud-kubernetes-service" />}
+                kind="secondary"
+              >
+                Tag content
+              </Badge>
+              <Badge
+                dismissable
+                icon={<Icon icon="carbon:ibm-cloud-kubernetes-service" />}
+                bordered
+                kind="success"
+              >
+                Tag content
+              </Badge>
+              <Badge
+                dismissable
+                icon={<Icon icon="carbon:ibm-cloud-kubernetes-service" />}
+                bordered
+                kind="mauve"
+              >
+                Tag content
+              </Badge>
+              {/*<Badge kind="dark">Tag content</Badge>*/}
             </div>
           </div>
 
