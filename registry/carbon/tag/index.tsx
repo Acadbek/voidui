@@ -3,7 +3,7 @@ import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "@/lib/utils";
 import { Icon } from "@iconify/react";
 
-const badgeVariants = cva(
+const tagVariants = cva(
   "inline-flex items-center rounded-full h-6 py-0.5 text-xs transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2",
   {
     variants: {
@@ -71,15 +71,15 @@ const badgeVariants = cva(
   },
 );
 
-export interface BadgeProps
+export interface TagProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof badgeVariants> {
+    VariantProps<typeof tagVariants> {
   icon?: React.ReactNode;
   onDismiss?: () => void;
   dismissable?: boolean;
 }
 
-function Badge({
+function Tag({
   kind,
   icon,
   children,
@@ -88,7 +88,7 @@ function Badge({
   className,
   dismissable,
   ...props
-}: BadgeProps) {
+}: TagProps) {
   const getSpacing = () => {
     if (icon && dismissable) return "icon-dismiss";
     if (icon) return "icon-only";
@@ -120,7 +120,7 @@ function Badge({
   return (
     <div
       className={cn(
-        badgeVariants({
+        tagVariants({
           kind,
           bordered: shouldBeBordered,
           spacing: getSpacing(),
@@ -156,4 +156,4 @@ function Badge({
   );
 }
 
-export { Badge, badgeVariants };
+export { Tag, tagVariants };

@@ -30,7 +30,7 @@ import {
   DialogTrigger,
 } from "@/registry/carbon/modal";
 import { Input } from "@/registry/carbon/input";
-import { Badge } from "@/registry/carbon/badge";
+import { Tag } from "@/registry/carbon/tag";
 import { Icon } from "@iconify/react";
 
 export default function Home() {
@@ -70,48 +70,47 @@ export default function Home() {
               <OpenInV0Button name="hello-world" className="w-fit" />
             </div>
             <div className="flex gap-1 items-center justify-center min-h-[400px] relative">
-              <Badge dismissable icon={<Icon icon="carbon:chip" />} bordered>
+              <Tag dismissable icon={<Icon icon="carbon:chip" />} bordered>
                 Tag content
-              </Badge>
-              <Badge
+              </Tag>
+              <Tag
                 icon={<Icon icon="carbon:accept-action-usage" />}
                 bordered
                 kind="destructive"
               >
                 Tag content
-              </Badge>
-              <Badge
+              </Tag>
+              <Tag
                 icon={<Icon icon="carbon:bicycle" />}
                 bordered
                 kind="outline"
               >
                 Tag content
-              </Badge>
-              <Badge
+              </Tag>
+              <Tag
                 bordered
                 dismissable
                 icon={<Icon icon="carbon:ibm-cloud-kubernetes-service" />}
                 kind="secondary"
               >
                 Tag content
-              </Badge>
-              <Badge
+              </Tag>
+              <Tag
                 dismissable
                 icon={<Icon icon="carbon:ibm-cloud-kubernetes-service" />}
                 bordered
                 kind="success"
               >
                 Tag content
-              </Badge>
-              <Badge
+              </Tag>
+              <Tag
                 dismissable
                 icon={<Icon icon="carbon:ibm-cloud-kubernetes-service" />}
                 bordered
                 kind="mauve"
               >
                 Tag content
-              </Badge>
-              {/*<Badge kind="dark">Tag content</Badge>*/}
+              </Tag>
             </div>
           </div>
 
@@ -290,7 +289,6 @@ export default function Home() {
                     <SelectItem value="blueberry">Blueberry</SelectItem>
                     <SelectItem value="grapes">Grapes</SelectItem>
                     <SelectItem value="pineapple1">Pineapple</SelectItem>
-                    <SelectItem value="pineapple2">Pineapple</SelectItem>
                   </SelectGroup>
                 </SelectContent>
               </Select>
