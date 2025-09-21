@@ -34,8 +34,6 @@ import { Input } from "@/registry/carbon/input";
 import { Tag } from "@/registry/carbon/tag";
 import { Icon } from "@iconify/react";
 import { ModeToggle } from "@/components/mode-toggle";
-import { Calendar } from "@/registry/carbon/calendar";
-import { PiIcon, TvIcon } from "lucide-react";
 import {
   Tabs,
   TabsContent,
