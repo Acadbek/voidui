@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Select,
   SelectContent,
@@ -10,7 +12,6 @@ import * as React from "react";
 import { OpenInV0Button } from "@/components/open-in-v0-button";
 import { Button } from "@/registry/carbon/button/button";
 import { ExampleForm } from "@/registry/carbon/example-form/example-form";
-import PokemonPage from "@/registry/carbon/complex-component/page";
 import {
   Accordion,
   AccordionContent,
@@ -32,6 +33,15 @@ import {
 import { Input } from "@/registry/carbon/input";
 import { Tag } from "@/registry/carbon/tag";
 import { Icon } from "@iconify/react";
+import { ModeToggle } from "@/components/mode-toggle";
+import { Calendar } from "@/registry/carbon/calendar";
+import { PiIcon, TvIcon } from "lucide-react";
+import {
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger,
+} from "@/registry/carbon/tabs";
 
 export default function Home() {
   return (
@@ -42,6 +52,7 @@ export default function Home() {
           <p className="text-muted-foreground">
             A custom registry for distributing code using shadcn.
           </p>
+          <ModeToggle />
         </header>
         <main className="flex flex-col flex-1 gap-8">
           <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
@@ -52,13 +63,37 @@ export default function Home() {
               <OpenInV0Button name="hello-world" className="w-fit" />
             </div>
             <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
-              <Button size="2xl">Primary</Button>
-              <Button variant="tertiary" size="2xl">
-                Tertiary
-              </Button>
-              <Button size="2xl" variant="destructive">
-                Primary
-              </Button>
+              <Tabs defaultValue="account" className="w-[400px]">
+                <TabsList>
+                  <TabsTrigger value="account">Account</TabsTrigger>
+                  <TabsTrigger value="password">Password</TabsTrigger>
+                  <TabsTrigger value="code">Code</TabsTrigger>
+                </TabsList>
+                <TabsContent value="account">
+                  Make changes to your account here.
+                </TabsContent>
+                <TabsContent value="password">
+                  Change your password here.
+                </TabsContent>
+                <TabsContent value="code">Code</TabsContent>
+              </Tabs>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm text-muted-foreground sm:pl-3">
+                Button component
+              </h2>
+              <OpenInV0Button name="hello-world" className="w-fit" />
+            </div>
+            <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
+              <Button>Primary</Button>
+              {/*<Button variant="tertiary">Tertiary</Button>
+              <Button variant="destructive">Destructive</Button>
+              <Button variant="ghost">Ghost</Button>
+              <Button variant="light">Light</Button>
+              <Button variant="dark">Dark</Button>*/}
             </div>
           </div>
 
@@ -156,7 +191,7 @@ export default function Home() {
               <Dialog>
                 <form>
                   <DialogTrigger asChild>
-                    <Button variant="dark">Open Dialog</Button>
+                    <Button kind="dark">Open Dialog</Button>
                   </DialogTrigger>
                   <DialogContent className="sm:w-[625px]">
                     <DialogHeader>
@@ -192,7 +227,7 @@ export default function Home() {
                     </div>
                     <DialogFooter>
                       <DialogClose asChild>
-                        <Button className="w-full" variant="dark">
+                        <Button className="w-full" kind="dark">
                           Cancel
                         </Button>
                       </DialogClose>
@@ -315,7 +350,7 @@ export default function Home() {
               <OpenInV0Button name="complex-component" className="w-fit" />
             </div>
             <div className="flex items-center justify-center min-h-[400px] relative">
-              <PokemonPage />
+              {/*<PokemonPage />*/}
             </div>
           </div>
         </main>
