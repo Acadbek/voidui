@@ -42,6 +42,27 @@ import {
 } from "@/registry/carbon/tabs";
 
 export default function Home() {
+
+  const [tabs, setTabs] = React.useState([
+    { id: 'tab1', label: 'Home', content: 'Home content' },
+    { id: 'tab2', label: 'Profile', content: 'Profile content' },
+    { id: 'tab3', label: 'Settings', content: 'Settings content' }
+  ]);
+  const [activeTab, setActiveTab] = React.useState('tab1');
+
+  const handleTabClose = (closedValue: string) => {
+    setTabs(prev => prev.filter(tab => tab.id !== closedValue));
+
+    if (activeTab === closedValue) {
+      const remainingTabs = tabs.filter(tab => tab.id !== closedValue);
+      if (remainingTabs.length > 0) {
+        setActiveTab(remainingTabs[0].id);
+      }
+    }
+
+    console.log(`Tab closed: ${closedValue}`);
+  };
+
   return (
     <TooltipProvider>
       <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
@@ -61,19 +82,25 @@ export default function Home() {
               <OpenInV0Button name="hello-world" className="w-fit" />
             </div>
             <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
-              <Tabs defaultValue="account" className="w-[400px]">
+              <Tabs kind="contained" value={activeTab} onValueChange={setActiveTab}>
                 <TabsList>
-                  <TabsTrigger value="account">Account</TabsTrigger>
-                  <TabsTrigger value="password">Password</TabsTrigger>
-                  <TabsTrigger value="code">Code</TabsTrigger>
+                  {tabs.map(tab => (
+                    <TabsTrigger
+                      icon={<Icon icon='carbon:3d-cursor' />}
+                      key={tab.id}
+                      value={tab.id}
+                      onClose={handleTabClose}
+                    >
+                      {tab.label}
+                    </TabsTrigger>
+                  ))}
                 </TabsList>
-                <TabsContent value="account">
-                  Make changes to your account here.
-                </TabsContent>
-                <TabsContent value="password">
-                  Change your password here.
-                </TabsContent>
-                <TabsContent value="code">Code</TabsContent>
+
+                {tabs.map(tab => (
+                  <TabsContent key={tab.id} value={tab.id}>
+                    {tab.content}
+                  </TabsContent>
+                ))}
               </Tabs>
             </div>
           </div>
