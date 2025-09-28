@@ -61,7 +61,6 @@ export default function Home() {
         setActiveTab(remainingTabs[0].id);
       }
     }
-
     console.log(`Tab closed: ${closedValue}`);
   };
 
