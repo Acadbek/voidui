@@ -59,7 +59,7 @@ const buttonVariants = cva(
         xl: "h-[var(--size-6-height,4rem)] w-[var(--size-6-width,12.5rem)] pl-[var(--size-6-pl,1rem)] pr-[var(--size-6-pr,4rem)] text-[var(--size-6-text,0.875rem)] pt-[var(--size-6-pt,1rem)] items-start",
 
         "2xl":
-          "h-[var(--size-7-height,5rem)] w-[var(--size-7-width,12.5rem)] pl-[var(--size-7-pl,1rem)] pr-[var(--size-7-pr,4rem)] text-[var(--size-7-text,0.875rem)] pt-[var(--size-7-pt,1rem)] items-start",
+          "h-[var(--size-7-height,5rem)] w-[var(--size-7-width,12.5rem)] pl-[var(--size-7-pl,1rem)] pr-[var(--size-7-pr,4rem)] pt-[var(--size-7-pt,1rem)] items-start",
 
         default:
           "h-[var(--size-default-height,3rem)] w-[var(--size-default-width,12.5rem)] pl-[var(--size-default-pl,1rem)] pr-[var(--size-default-pr,4rem)]",

@@ -47,8 +47,7 @@ export default function Home() {
   const [tabs, setTabs] = React.useState([
     { id: 'tab1', label: 'Home', content: 'Home content' },
     { id: 'tab2', label: 'Profile', content: 'Profile content' },
-    { id: 'tab3', label: 'Settings', content: 'Settings content' },
-    { id: 'tab4', label: 'Custom', content: 'Settings content 3' }
+    { id: 'tab3', label: 'Settings', content: 'Settings content' }
   ]);
   const [activeTab, setActiveTab] = React.useState('tab1');
 
@@ -61,6 +60,7 @@ export default function Home() {
         setActiveTab(remainingTabs[0].id);
       }
     }
+
     console.log(`Tab closed: ${closedValue}`);
   };
 
@@ -76,7 +76,7 @@ export default function Home() {
         </header>
         <main className="flex flex-col flex-1 gap-8">
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Code snipped component
@@ -91,7 +91,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Button component
@@ -122,7 +122,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Button component
@@ -136,10 +136,17 @@ export default function Home() {
               <Button kind="ghost">Ghost</Button>
               <Button kind="light">Light</Button>
               <Button kind="dark">Dark</Button>
+
+              <Button size={'2xl'}>Primary</Button>
+              <Button size={'2xl'} kind="tertiary">Tertiary</Button>
+              <Button size={'2xl'} kind="destructive">Destructive</Button>
+              <Button size={'2xl'} kind="ghost">Ghost</Button>
+              <Button size={'2xl'} kind="light">Light</Button>
+              <Button size={'2xl'} kind="dark">Dark</Button>
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Button component
@@ -191,7 +198,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Code snipped component
@@ -210,7 +217,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Code snipped component
@@ -222,7 +229,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 A simple tooltip component
@@ -283,7 +290,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 A simple accordion component
@@ -347,7 +354,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 Select component
@@ -372,7 +379,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 A contact form with Zod validation.
@@ -384,7 +391,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
                 A complex component showing hooks, libs and components.
