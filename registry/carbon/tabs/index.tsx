@@ -164,8 +164,6 @@ const TabsTrigger = React.forwardRef<
     );
   }
 
-
-
   return (
     <TabsPrimitive.Trigger
       ref={ref}

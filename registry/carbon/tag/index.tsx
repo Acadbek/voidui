@@ -73,7 +73,7 @@ const tagVariants = cva(
 
 export interface TagProps
   extends React.HTMLAttributes<HTMLDivElement>,
-    VariantProps<typeof tagVariants> {
+  VariantProps<typeof tagVariants> {
   icon?: React.ReactNode;
   onDismiss?: () => void;
   dismissable?: boolean;
