@@ -40,13 +40,15 @@ import {
   TabsList,
   TabsTrigger,
 } from "@/registry/carbon/tabs";
+import { Alert, AlertDescription, AlertTitle } from "@/registry/carbon/alert";
 
 export default function Home() {
 
   const [tabs, setTabs] = React.useState([
     { id: 'tab1', label: 'Home', content: 'Home content' },
     { id: 'tab2', label: 'Profile', content: 'Profile content' },
-    { id: 'tab3', label: 'Settings', content: 'Settings content' }
+    { id: 'tab3', label: 'Settings', content: 'Settings content' },
+    { id: 'tab4', label: 'Custom', content: 'Settings content 3' }
   ]);
   const [activeTab, setActiveTab] = React.useState('tab1');
 
@@ -59,7 +61,6 @@ export default function Home() {
         setActiveTab(remainingTabs[0].id);
       }
     }
-
     console.log(`Tab closed: ${closedValue}`);
   };
 
@@ -67,13 +68,29 @@ export default function Home() {
     <TooltipProvider>
       <div className="max-w-3xl mx-auto flex flex-col min-h-svh px-4 py-8 gap-8">
         <header className="flex flex-col gap-1">
-          <h1 className="text-3xl font-bold tracking-tight">Void UI</h1>
+          <h1 className="text-3xl font-bold tracking-tight">Salom UI</h1>
           <p className="text-muted-foreground">
             A custom registry for distributing code using shadcn.
           </p>
           <ModeToggle />
         </header>
         <main className="flex flex-col flex-1 gap-8">
+
+          <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
+            <div className="flex items-center justify-between">
+              <h2 className="text-sm text-muted-foreground sm:pl-3">
+                Code snipped component
+              </h2>
+              <OpenInV0Button name="hello-world" className="w-fit" />
+            </div>
+            <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
+              <Alert>
+                <AlertTitle>Notification title</AlertTitle>
+                <AlertDescription>Subtitle text goes here</AlertDescription>
+              </Alert>
+            </div>
+          </div>
+
           <div className="flex flex-col gap-4 border rounded-lg p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
               <h2 className="text-sm text-muted-foreground sm:pl-3">
@@ -112,13 +129,13 @@ export default function Home() {
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
             </div>
-            <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
+            <div className="flex flex-wrap gap-[1px] justify-center min-h-[400px] relative">
               <Button>Primary</Button>
-              {/*<Button variant="tertiary">Tertiary</Button>
-              <Button variant="destructive">Destructive</Button>
-              <Button variant="ghost">Ghost</Button>
-              <Button variant="light">Light</Button>
-              <Button variant="dark">Dark</Button>*/}
+              <Button kind="tertiary">Tertiary</Button>
+              <Button kind="destructive">Destructive</Button>
+              <Button kind="ghost">Ghost</Button>
+              <Button kind="light">Light</Button>
+              <Button kind="dark">Dark</Button>
             </div>
           </div>
 

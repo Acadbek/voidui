@@ -45,6 +45,7 @@
 }
 
 @layer base {
+
     *,
     ::after,
     ::before,
@@ -56,9 +57,11 @@
 
 @layer base {
     :root {
+        --red: oklch(0.5692 0.2174 25.93);
         --background: oklch(1 0 0);
         --background-darken: oklch(0.95 0 0);
         --background-active: oklch(0.9 0 0);
+        --dark-gray: oklch(0.3446 0 0);
 
         --foreground: oklch(0.145 0 0);
 
@@ -146,6 +149,7 @@
     }
 
     .dark {
+        --red: oklch(0.5692 0.2174 25.93);
         --background: oklch(0.145 0 0);
         --foreground: oklch(0.985 0 0);
 
@@ -185,7 +189,7 @@
         --light-focus-ring: oklch(65.65% 0.243 261.95);
 
         /* Dark Button Variables - Dark Mode */
-        --dark: oklch(5% 0 0);
+        --dark: oklch(0.9672 0 0);
         --dark-hover: oklch(10% 0 0);
         --dark-active: oklch(15% 0 0);
         --dark-foreground: oklch(100% 0 0);
@@ -255,10 +259,6 @@
         --size-default-pl: 1rem;
         --size-default-pr: 4rem;
 
-        /* Icon sizes */
-        --size-icon-height: 3rem;
-        --size-icon-width: 3rem;
-
         /* Calendar icon */
         --size-calendar-height: 2.5rem;
         --size-calendar-width: 2.5rem;
@@ -300,6 +300,7 @@
     * {
         @apply border-border;
     }
+
     body {
         @apply bg-background text-foreground;
     }
@@ -323,7 +324,7 @@
     @apply px-2;
 }
 
-[data-rehype-pretty-code-fragment] [data-line-numbers] > .line::before {
+[data-rehype-pretty-code-fragment] [data-line-numbers]>.line::before {
     @apply text-zinc-50/40 text-xs;
     counter-increment: line;
     content: counter(line);
@@ -353,7 +354,7 @@
     @apply mt-2 pt-6 px-4 text-sm font-medium text-foreground;
 }
 
-[data-rehype-pretty-code-title] + pre {
+[data-rehype-pretty-code-title]+pre {
     @apply mt-2;
 }
 

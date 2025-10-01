@@ -43,8 +43,7 @@ const buttonVariants = cva(
         ghost: `bg-[var(--ghost)]
           hover:bg-[var(--ghost-hover)]
           active:bg-[var(--ghost-active)]
-          text-[var(--ghost-foreground)]
-          focus:[box-shadow:inset_0_0_0_2px_var(--ghost-hover),inset_0_0_0_3px_var(--ghost-focus-ring)]`,
+          focus:[box-shadow:inset_0_0_0_2px_var(--ghost-hover),inset_0_0_0_1px_var(--ghost-focus-ring)]`,
       },
       size: {
         xs: "h-[var(--size-1-height,1.5rem)] w-[var(--size-1-width,12.5rem)] pl-[var(--size-1-pl,1rem)] pr-[var(--size-1-pr,4rem)] text-[var(--size-1-text,0.75rem)]",
@@ -65,7 +64,7 @@ const buttonVariants = cva(
         default:
           "h-[var(--size-default-height,3rem)] w-[var(--size-default-width,12.5rem)] pl-[var(--size-default-pl,1rem)] pr-[var(--size-default-pr,4rem)]",
 
-        icon: "h-[var(--size-icon-height,3rem)] w-[var(--size-icon-width,3rem)] flex items-center justify-center",
+        icon: "h-10 w-10 flex items-center justify-center",
 
         "calendar-icon":
           "h-[var(--cell-size,var(--size-calendar-height,2.5rem))] w-[var(--cell-size,var(--size-calendar-width,2.5rem))] justify-center",
@@ -90,7 +89,7 @@ const buttonVariants = cva(
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof buttonVariants> {
+  VariantProps<typeof buttonVariants> {
   asChild?: boolean;
   hasIcon?: boolean;
   iconOnly?: boolean;
