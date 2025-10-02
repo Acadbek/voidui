@@ -104,7 +104,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       asChild = false,
       hasIcon,
       iconOnly,
-      children,
+      children = 'Click',
       ...props
     },
     ref,
