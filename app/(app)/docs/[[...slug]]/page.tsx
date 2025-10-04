@@ -11,12 +11,9 @@ interface PageProps {
 }
 
 export default async function ComponentPage({ params }: PageProps) {
-  const slug = await params.slug || []
+  const slug = params.slug || []
 
   const componentName = slug[1]
-
-  console.log(componentName);
-
 
   if (!componentName) {
     return (
@@ -30,9 +27,6 @@ export default async function ComponentPage({ params }: PageProps) {
   }
 
   const registryItem = getRegistryItem(componentName)
-
-  console.log(registryItem);
-
 
   if (!registryItem) {
     notFound()

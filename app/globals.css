@@ -57,13 +57,7 @@
 
 @layer base {
     :root {
-        --red: oklch(0.5692 0.2174 25.93);
         --background: oklch(1 0 0);
-        --background-darken: oklch(0.95 0 0);
-        --background-active: oklch(0.9 0 0);
-        --dark-gray: oklch(0.9067 0 0);
-
-
         --foreground: oklch(0.145 0 0);
 
         --card: oklch(1 0 0);
@@ -71,44 +65,28 @@
 
         --popover: oklch(1 0 0);
 
-        /* Primary Button Variables */
         --primary: oklch(55.65% 0.243 261.95);
         --primary-foreground: oklch(0.985 0 0);
         --primary-focus-ring: #fff;
 
-        /* Destructive Button Variables */
         --destructive: oklch(0.6 0.2 25);
         --destructive-foreground: oklch(0.985 0 0);
         --destructive-focus-ring: #ffffff;
 
-        /* Tertiary Button Variables */
         --tertiary: oklch(1 0 0);
-        --tertiary-hover: oklch(0.95 0 0);
-        --tertiary-active: oklch(0.9 0 0);
-        --tertiary-border: oklch(55.65% 0.243 261.95);
         --tertiary-foreground: oklch(55.65% 0.243 261.95);
         --tertiary-focus-ring: oklch(55.65% 0.243 261.95);
 
-        /* Light Button Variables */
         --light: oklch(1 0 0);
-        --light-hover: oklch(0.95 0 0);
-        --light-active: oklch(92.19% 0 0);
         --light-foreground: oklch(20.02% 0 0);
         --light-focus-ring: oklch(55.65% 0.243 261.95);
 
-        /* Dark Button Variables */
         --dark: oklch(20.02% 0 0);
-        --dark-hover: oklch(0% 0 0);
-        --dark-active: oklch(30.02% 0 0);
         --dark-foreground: oklch(100% 0 0);
         --dark-focus-ring: oklch(100% 0 0);
 
-        /* Ghost Button Variables */
         --ghost: transparent;
-        --ghost-hover: oklch(0.95 0 0);
-        --ghost-active: oklch(0.9 0 0);
         --ghost-foreground: oklch(55.65% 0.243 261.95);
-        --ghost-focus: oklch(55.65% 0.243 261.95);
         --ghost-focus-ring: #fff;
 
         --secondary: oklch(0.965 0 0);
@@ -119,9 +97,6 @@
 
         --accent: oklch(0.965 0 0);
         --accent-foreground: oklch(0.145 0 0);
-
-        --color-destructive-darker: oklch(0.55 0.2 25);
-        --color-destructive-active: oklch(0.45 0.2 25);
 
         --border: oklch(0.9 0 0);
         --input: oklch(0.9 0 0);
@@ -146,9 +121,6 @@
     }
 
     .dark {
-        --dark-gray: oklch(0.3446 0 0);
-
-        --red: oklch(0.5692 0.2174 25.93);
         --background: oklch(0.145 0 0);
         --foreground: oklch(0.985 0 0);
 
@@ -158,42 +130,27 @@
         --popover: oklch(0.145 0 0);
         --popover-foreground: oklch(0.985 0 0);
 
-        /* Primary Button Variables - Dark Mode */
         --primary: oklch(55.65% 0.243 261.95);
-        --primary-hover: oklch(60.65% 0.243 261.95);
-        --primary-active: oklch(50.65% 0.243 261.95);
         --primary-foreground: oklch(0.145 0.334 222);
         --primary-focus-ring: oklch(0.2 0 0);
 
-        /* Destructive Button Variables - Dark Mode */
         --destructive: oklch(0.65 0.2 25);
-        --destructive-hover: oklch(0.235 0.2 25);
-        --destructive-active: oklch(0.135 0.2 25);
         --destructive-foreground: oklch(100% 0 0);
         --destructive-focus-ring: oklch(20% 0 0);
 
-        /* Tertiary Button Variables - Dark Mode */
         --tertiary: oklch(15% 0 0);
-        --tertiary-border: oklch(65.65% 0.243 261.95);
         --tertiary-foreground: oklch(65.65% 0.243 261.95);
         --tertiary-focus-ring: oklch(65.65% 0.243 261.95);
 
-        /* Light Button Variables - Dark Mode */
         --light: oklch(90% 0 0);
-        --light-hover: oklch(85% 0 0);
-        --light-active: oklch(80% 0 0);
         --light-foreground: oklch(15% 0 0);
         --light-focus-ring: oklch(65.65% 0.243 261.95);
 
         --dark-foreground: oklch(100% 0 0);
         --dark-focus-ring: oklch(80% 0 0);
 
-        /* Ghost Button Variables - Dark Mode */
         --ghost: transparent;
-        --ghost-hover: oklch(20% 0 0);
-        --ghost-active: oklch(25% 0 0);
         --ghost-foreground: oklch(80% 0 0);
-        --ghost-focus: oklch(65.65% 0.243 261.95);
         --ghost-focus-ring: oklch(20% 0 0);
 
         --size-1-height: 1.5rem;

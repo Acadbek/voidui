@@ -37,8 +37,8 @@ const buttonVariants = cva(
 
         dark: `bg-[var(--dark)]
           text-[var(--dark-foreground)]
-          hover:bg-accent
-          active:hover:bg-accent/70
+          hover:bg-[var(--dark)]/90
+          active:bg-[var(--dark)]/80
           focus:[box-shadow:inset_0_0_0_2px_var(--dark),inset_0_0_0_3px_var(--dark-focus-ring)]`,
 
         ghost: `bg-[var(--ghost)]

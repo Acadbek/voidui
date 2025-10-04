@@ -10,7 +10,7 @@ const alertVariants = cva(
   {
     variants: {
       variant: {
-        default: "border text-white border-l-3 border-l-[var(--red)]",
+        default: "border text-white border-l-3 border-l-[var(--destructive)]",
         destructive:
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
       },
@@ -34,7 +34,7 @@ const Alert = React.forwardRef<
     <div className="w-full flex items-center justify-between gap-4 pr-[2px]">
       <div className="flex items-center justify-between">
         <span className="px-4">
-          <Icon icon='carbon:error-filled' fontSize="18px" color="var(--red)" />
+          <Icon icon='carbon:error-filled' fontSize="18px" color="var(--destructive)" />
         </span>
         <div className="flex flex-col items-start gap-2">{children}</div>
       </div>
