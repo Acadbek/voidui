@@ -61,7 +61,8 @@
         --background: oklch(1 0 0);
         --background-darken: oklch(0.95 0 0);
         --background-active: oklch(0.9 0 0);
-        --dark-gray: oklch(0.3446 0 0);
+        --dark-gray: oklch(0.9067 0 0);
+
 
         --foreground: oklch(0.145 0 0);
 
@@ -72,15 +73,11 @@
 
         /* Primary Button Variables */
         --primary: oklch(55.65% 0.243 261.95);
-        --primary-hover: oklch(50.65% 0.243 261.95);
-        --primary-active: oklch(40.65% 0.243 261.95);
         --primary-foreground: oklch(0.985 0 0);
         --primary-focus-ring: #fff;
 
         /* Destructive Button Variables */
         --destructive: oklch(0.6 0.2 25);
-        --destructive-hover: oklch(0.55 0.2 25);
-        --destructive-active: oklch(0.45 0.2 25);
         --destructive-foreground: oklch(0.985 0 0);
         --destructive-focus-ring: #ffffff;
 
@@ -149,6 +146,8 @@
     }
 
     .dark {
+        --dark-gray: oklch(0.3446 0 0);
+
         --red: oklch(0.5692 0.2174 25.93);
         --background: oklch(0.145 0 0);
         --foreground: oklch(0.985 0 0);
@@ -175,8 +174,6 @@
 
         /* Tertiary Button Variables - Dark Mode */
         --tertiary: oklch(15% 0 0);
-        --tertiary-hover: oklch(20% 0 0);
-        --tertiary-active: oklch(25% 0 0);
         --tertiary-border: oklch(65.65% 0.243 261.95);
         --tertiary-foreground: oklch(65.65% 0.243 261.95);
         --tertiary-focus-ring: oklch(65.65% 0.243 261.95);
@@ -188,10 +185,6 @@
         --light-foreground: oklch(15% 0 0);
         --light-focus-ring: oklch(65.65% 0.243 261.95);
 
-        /* Dark Button Variables - Dark Mode */
-        --dark: oklch(0.9672 0 0);
-        --dark-hover: oklch(10% 0 0);
-        --dark-active: oklch(15% 0 0);
         --dark-foreground: oklch(100% 0 0);
         --dark-focus-ring: oklch(80% 0 0);
 

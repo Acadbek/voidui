@@ -9,41 +9,41 @@ const buttonVariants = cva(
     variants: {
       kind: {
         primary: `bg-[var(--primary)]
-          hover:bg-[var(--primary-hover)]
-          active:bg-[var(--primary-active)]
+          hover:bg-[var(--primary)]/90
+          active:bg-[var(--primary)]/70
           text-[var(--primary-foreground)]
           focus:[box-shadow:inset_0_0_0_2px_var(--primary),inset_0_0_0_3px_var(--primary-focus-ring)]`,
 
         destructive: `bg-[var(--destructive)]
-          hover:bg-[var(--destructive-hover)]
-          active:bg-[var(--destructive-active)]
+          hover:bg-[var(--destructive)]/90
+          active:bg-[var(--destructive)]/70
           text-[var(--destructive-foreground)]
           focus:[box-shadow:inset_0_0_0_2px_var(--destructive),inset_0_0_0_3px_var(--destructive-focus-ring)]`,
 
         tertiary: `bg-[var(--tertiary)]
-          hover:bg-[var(--tertiary-hover)]
-          active:bg-[var(--tertiary-active)]
+          hover:bg-[var(--tertiary)]/50
+          active:bg-[var(--tertiary)]/5
           border-[1px]
           border-[var(--tertiary-border)]
           text-[var(--tertiary-foreground)]
           focus:[box-shadow:inset_0_0_0_2px_var(--tertiary),inset_0_0_0_3px_var(--tertiary-focus-ring)]`,
 
-        light: `bg-[var(--light)]
-          hover:bg-[var(--light-hover)]
-          active:bg-[var(--light-active)]
+        light: `bg-[var(--light)] border
+          hover:bg-[var(--light)]/90
+          active:bg-[var(--light)]/70
           text-[var(--light-foreground)]
-          focus:[box-shadow:inset_0_0_0_2px_var(--light),inset_0_0_0_3px_var(--light-focus-ring)]`,
+          dark:focus:[box-shadow:inset_0_0_0_2px_var(--light),inset_0_0_0_3px_var(--light-focus-ring)]
+          focus:[box-shadow:inset_0_0_0_2px_var(--light),inset_0_0_0_3px_var(--primary)]`,
 
         dark: `bg-[var(--dark)]
           text-[var(--dark-foreground)]
-          active:bg-[var(--dark-active)]
-          hover:bg-[var(--dark-hover)]
+          hover:bg-accent
+          active:hover:bg-accent/70
           focus:[box-shadow:inset_0_0_0_2px_var(--dark),inset_0_0_0_3px_var(--dark-focus-ring)]`,
 
         ghost: `bg-[var(--ghost)]
-          hover:bg-[var(--ghost-hover)]
-          active:bg-[var(--ghost-active)]
-          focus:[box-shadow:inset_0_0_0_2px_var(--ghost-hover),inset_0_0_0_1px_var(--ghost-focus-ring)]`,
+          hover:bg-accent
+          active:hover:bg-accent/70`
       },
       size: {
         xs: "h-[var(--size-1-height,1.5rem)] w-[var(--size-1-width,12.5rem)] pl-[var(--size-1-pl,1rem)] pr-[var(--size-1-pr,4rem)] text-[var(--size-1-text,0.75rem)]",

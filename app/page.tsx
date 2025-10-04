@@ -78,7 +78,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Code snipped component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -91,9 +91,9 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
+          <div className="flex flex-col gap-4 border min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Button component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -124,31 +124,33 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Button component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
             </div>
-            <div className="flex flex-wrap gap-[1px] justify-center min-h-[400px] relative">
-              <Button>Primary</Button>
-              <Button kind="tertiary">Tertiary</Button>
-              <Button kind="destructive">Destructive</Button>
-              <Button kind="ghost">Ghost</Button>
-              <Button kind="light">Light</Button>
-              <Button kind="dark">Dark</Button>
-
-              <Button size={'2xl'}>Primary</Button>
-              <Button size={'2xl'} kind="tertiary">Tertiary</Button>
-              <Button size={'2xl'} kind="destructive">Destructive</Button>
-              <Button size={'2xl'} kind="ghost">Ghost</Button>
-              <Button size={'2xl'} kind="light">Light</Button>
-              <Button size={'2xl'} kind="dark">Dark</Button>
+            <div className="min-h-[400px] relative">
+              <div className="flex flex-wrap gap-[1px]">
+                <Button>Primary</Button>
+                <Button kind="tertiary">Tertiary</Button>
+                <Button kind="destructive">Destructive</Button>
+                <Button kind="ghost">Ghost</Button>
+                <Button kind="dark">Dark</Button>
+              </div>
+              <p className="mt-6 text-muted-foreground text-sm">2XL</p>
+              <div className="flex flex-wrap gap-[1px] mt-2">
+                <Button size={'2xl'}>Primary</Button>
+                <Button size={'2xl'} kind="tertiary">Tertiary</Button>
+                <Button size={'2xl'} kind="destructive">Destructive</Button>
+                <Button size={'2xl'} kind="ghost">Ghost</Button>
+                <Button size={'2xl'} kind="dark">Dark</Button>
+              </div>
             </div>
           </div>
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Button component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -200,7 +202,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Code snipped component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -219,7 +221,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Code snipped component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -231,7 +233,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 A simple tooltip component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -292,7 +294,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 A simple accordion component
               </h2>
               <OpenInV0Button name="hello-world" className="w-fit" />
@@ -356,7 +358,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 Select component
               </h2>
               <OpenInV0Button name="Select" className="w-fit" />
@@ -381,7 +383,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 A contact form with Zod validation.
               </h2>
               <OpenInV0Button name="example-form" className="w-fit" />
@@ -393,7 +395,7 @@ export default function Home() {
 
           <div className="flex flex-col gap-4 border p-4 min-h-[450px] relative">
             <div className="flex items-center justify-between">
-              <h2 className="text-sm text-muted-foreground sm:pl-3">
+              <h2 className="text-sm text-muted-foreground">
                 A complex component showing hooks, libs and components.
               </h2>
               <OpenInV0Button name="complex-component" className="w-fit" />

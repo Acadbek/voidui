@@ -6,11 +6,11 @@ import { Icon } from "@iconify/react"
 import { Button } from "../button/button"
 
 const alertVariants = cva(
-  "w-full flex items-center h-[48px] [&>svg]:hidden",
+  "w-full flex items-center py-3 [&>svg]:hidden",
   {
     variants: {
       variant: {
-        default: "bg-[var(--dark-gray)] text-white border-l-3 border-l-[var(--red)]",
+        default: "border text-white border-l-3 border-l-[var(--red)]",
         destructive:
           "border-destructive/50 text-destructive dark:border-destructive [&>svg]:text-destructive",
       },
@@ -36,7 +36,7 @@ const Alert = React.forwardRef<
         <span className="px-4">
           <Icon icon='carbon:error-filled' fontSize="18px" color="var(--red)" />
         </span>
-        <div className="flex items-center gap-2">{children}</div>
+        <div className="flex flex-col items-start gap-2">{children}</div>
       </div>
       <Button className="hover:bg-transparent h-[44px] w-[44px] active:bg-transparent" kind='ghost' size='icon'>
         <Icon icon='carbon:close' fontSize='16px' />
@@ -52,7 +52,7 @@ const AlertTitle = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <h5
     ref={ref}
-    className={cn("font-medium dark:text-white leading-none tracking-tight", className)}
+    className={cn("text-muted leading-none tracking-tight col-start-2 line-clamp-1 min-h-4", className)}
     {...props}
   />
 ))
@@ -64,7 +64,7 @@ const AlertDescription = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn("text-sm [&_p]:leading-relaxed", className)}
+    className={cn("text-muted-foreground col-start-2 grid justify-items-start gap-1 text-sm [&_p]:leading-relaxed", className)}
     {...props}
   />
 ))
