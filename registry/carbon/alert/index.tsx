@@ -6,7 +6,7 @@ import { Icon } from "@iconify/react"
 import { Button } from "../button/button"
 
 const alertVariants = cva(
-  "w-full flex items-center py-3 [&>svg]:hidden",
+  "w-full flex items-center h-16 py-3 [&>svg]:hidden",
   {
     variants: {
       variant: {

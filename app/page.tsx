@@ -99,26 +99,26 @@ export default function Home() {
               <OpenInV0Button name="hello-world" className="w-fit" />
             </div>
             <div className="flex gap-[1px] items-center justify-center min-h-[400px] relative">
-              <Tabs kind="contained" value={activeTab} onValueChange={setActiveTab}>
-                <TabsList>
-                  {tabs.map(tab => (
-                    <TabsTrigger
-                      icon={<Icon icon='carbon:3d-cursor' />}
-                      key={tab.id}
-                      value={tab.id}
-                      onClose={handleTabClose}
-                    >
-                      {tab.label}
-                    </TabsTrigger>
-                  ))}
-                </TabsList>
+                <Tabs kind="contained" value={activeTab} onValueChange={setActiveTab}>
+                  <TabsList>
+                    {tabs.map(tab => (
+                      <TabsTrigger
+                        icon={<Icon icon='carbon:3d-cursor' />}
+                        key={tab.id}
+                        value={tab.id}
+                        onClose={handleTabClose}
+                      >
+                        {tab.label}
+                      </TabsTrigger>
+                    ))}
+                  </TabsList>
 
-                {tabs.map(tab => (
-                  <TabsContent key={tab.id} value={tab.id}>
-                    {tab.content}
-                  </TabsContent>
-                ))}
-              </Tabs>
+                  {tabs.map(tab => (
+                    <TabsContent key={tab.id} value={tab.id}>
+                      {tab.content}
+                    </TabsContent>
+                  ))}
+                </Tabs>
             </div>
           </div>
 

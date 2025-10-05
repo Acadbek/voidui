@@ -11,7 +11,7 @@ interface PageProps {
 }
 
 export default async function ComponentPage({ params }: PageProps) {
-  const slug = params.slug || []
+  const slug = await params?.slug || []
 
   const componentName = slug[1]
 
@@ -33,6 +33,7 @@ export default async function ComponentPage({ params }: PageProps) {
   }
 
   const code = getComponentCode(componentName)
+  console.log(code);
 
   return (
     <div className="container py-10 space-y-8">
