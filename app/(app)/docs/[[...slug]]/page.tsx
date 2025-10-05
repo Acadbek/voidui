@@ -11,7 +11,7 @@ interface PageProps {
 }
 
 export default async function ComponentPage({ params }: PageProps) {
-  const slug = await params?.slug || []
+  const slug = params?.slug || []
 
   const componentName = slug[1]
 
