@@ -10,7 +10,7 @@ interface PageProps {
   }
 }
 
-export default async function ComponentPage({ params }: PageProps) {
+export default function ComponentPage({ params }: PageProps) {
   const slug = params?.slug || []
 
   const componentName = slug[1]
